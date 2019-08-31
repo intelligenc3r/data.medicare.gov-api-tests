@@ -1,0 +1,32 @@
+{
+  "name": "medicare-api-test",
+  "version": "1.0.0",
+  "description": "Tests and experiments for data fetching directly from the server",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha - timeout 1000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intelligenc3r/data.medicare.gov-api-tests.git"
+  },
+  "keywords": [
+    "medicare",
+    "data",
+    "tests"
+  ],
+  "author": "Riste Ajtov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/intelligenc3r/data.medicare.gov-api-tests/issues"
+  },
+  "homepage": "https://github.com/intelligenc3r/data.medicare.gov-api-tests#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
