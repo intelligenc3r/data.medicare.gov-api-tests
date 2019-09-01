@@ -30,4 +30,53 @@ describe('Hospital', ()=>{
         })
     })
 
+    describe('/GET nursing', ()=>{
+        it("Request should get all nursing homes", (done)=>{
+            chai.request(server)
+            .get('/nursing')
+            .end((err, res) => {
+                (res).should.have.status(200)
+                (res.body).should.be.a('object')
+                (res.body.nursing).should.include.keys("location")
+                done()
+            })
+        })
+    })
+
+    describe('/GET hospice', ()=>{
+        it("Request should get all hospices", (done)=>{
+            chai.request(server)
+            .get('/hospice')
+            .end((err, res) => {
+                (res).should.have.status(200)
+                (res.body).should.be.a('object')
+                done()
+            })
+        })
+    })
+
+    describe('/GET rehab', ()=>{
+        it("Request should get all inpatient rehab clinics", (done)=>{
+            chai.request(server)
+            .get('/rehab')
+            .end((err, res) => {
+                (res).should.have.status(200)
+                (res.body).should.be.a('object')
+                done()
+            })
+        })
+    })
+
+    describe('/GET dialysis', ()=>{
+        it("Request should get all dialysis providers", (done)=>{
+            chai.request(server)
+            .get('/dialysis')
+            .end((err, res) => {
+                (res).should.have.status(200)
+                (res.body).should.be.a('object')
+                done()
+            })
+        })
+    })
+
 })
