@@ -4,7 +4,8 @@
   "description": "Tests and experiments for data fetching directly from the server",
   "main": "server.js",
   "scripts": {
-    "test": "mocha - timeout 1000"
+    "test": "mocha - timeout 1000",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,12 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-prettify": "^0.1.1",
+    "soda-js": "^0.2.3"
   }
 }
