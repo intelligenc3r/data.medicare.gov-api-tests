@@ -1,5 +1,4 @@
 const soda = require('soda-js')
-
 const apiURL = new soda.Consumer('data.medicare.gov')
 
 let hospitalList
