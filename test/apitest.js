@@ -8,20 +8,20 @@ describe('Hospital', ()=>{
     describe('/GET hospitals', ()=>{
         it('Request should get all hospitals', (done)=>{
             chai.request(server)
-            .get('/media')
+            .get('/hospitals')
             .end((err, res) =>{
                 (res).should.have.status(200)
                 (res.body).should.be.a('object')
-                (res.body.hospitals.length).should.be.eql(1)
+                (res.body.hospitals).should.include.keys("location")
                 done()
             })
         })
     })
 
-    describe('/GET message', ()=>{
-        it("Request should get a test message", (done)=>{
+    describe('/GET physician', ()=>{
+        it("Request should get a subset of physicians", (done)=>{
             chai.request(server)
-            .get('/message')
+            .get('/physicians')
             .end((err, res) => {
                 (res).should.have.status(200)
                 (res.body).should.be.a('object')
